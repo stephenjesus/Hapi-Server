@@ -1,9 +1,10 @@
 import User from '../../model/user';
-import Resolver from '../../common/base-resolver';
-import Repository from '../../common/base-repository';
+import Resolver from './respository';
+import Repository from './respository';
 
-export default class UserResolver extends Resolver<User> {
+export default class UserResolver {
+    public repository: any;
     constructor() {
-        super(new Repository());
+        this.repository = new Repository();
     }
 }

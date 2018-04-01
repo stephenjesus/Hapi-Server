@@ -8,6 +8,7 @@ import Router from './router';
 export default class Server {
     private static _instance: Hapi.Server;
 
+    
     public static async start(): Promise<Hapi.Server> {
         try {
             DotEnv.config({
@@ -19,6 +20,10 @@ export default class Server {
             Server._instance.connection({
                 host: process.env.HOST,
                 port: process.env.PORT,
+                routes: {
+                    security: true,
+                    cors: true,
+                },
             });
 
             await Plugin.registerAll(Server._instance);

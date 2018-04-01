@@ -27,13 +27,21 @@
     ]
   },
   "dependencies": {
+    "@types/lodash": "4.14.106",
+    "@types/reflect-metadata": "0.1.0",
+    "@types/sequelize": "4.27.12",
     "hapi": "^16.5.2",
     "hapi-boom-decorators": "^3.0.0",
     "hapi-swagger": "^7.7.0",
     "hapijs-status-monitor": "^0.6.0",
     "inert": "^4.2.1",
     "joi": "^10.6.0",
+    "lodash": "4.17.5",
+    "mysql": "2.15.0",
+    "mysql2": "1.5.3",
     "nedb": "^1.8.0",
+    "sequelize": "4.37.5",
+    "sequelize-typescript": "0.6.3",
     "vision": "^4.1.1",
     "winston": "^2.3.1",
     "winston-daily-rotate-file": "^1.4.6"

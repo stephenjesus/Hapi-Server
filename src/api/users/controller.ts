@@ -1,9 +1,13 @@
+import * as Boom from 'boom';
+import Logger from '../../helper/logger';
+ 
+//  import  resolver 
 import User from '../../model/user';
 import UserResolver from './resolver';
-import CrudController from '../../common/crud-controller';
 
-export default class UserController extends CrudController<User> {
+export default class UserController {
+    public resolver: any;
     constructor() {
-        super(new UserResolver());
+        this.resolver = new UserResolver();
     }
 }
