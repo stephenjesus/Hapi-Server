@@ -1,26 +1,36 @@
 import * as Joi from 'joi';
 
 export default {
-    create: {
-        payload: {
-            age: Joi.number().integer().required(),
-            name: Joi.string().required(),
-            lastName: Joi.string().required(),
-        },
+    getuserbyid: {
+        params: {
+            rollno: Joi.string().required(),
+        }
+    },
+    getuserlist: {
+        query: { page: Joi.number().required().max(1),
+            datalimit : Joi.number().required().min(2)
+        }
+    },
+    Createuser: {
+        payload : {
+            Name: Joi.string().required(),
+            rollno: Joi.string().required().min(1),
+            mobilenumber: Joi.number().required().min(10)
+        }
+    },
+    searchuser: {
+        payload : Joi.string().optional(),
     },
     updateById: {
-        params: {
-            id: Joi.string().required(),
-        },
+        // params: {
+        //     rollno: Joi.string().required(),
+        // },
         payload: {
-            age: Joi.number().integer().optional(),
-            name: Joi.string().optional(),
-            lastName: Joi.string().optional(),
-        },
-    },
-    getById: {
-        params: {
-            id: Joi.string().required(),
+            mobilenumber: Joi.number()
+                .min(10)
+                .optional(),
+            Name: Joi.string().optional(),
+            rollno: Joi.string().required().min(1),
         },
     },
     deleteById: {

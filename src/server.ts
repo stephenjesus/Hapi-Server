@@ -8,7 +8,6 @@ import Router from './router';
 export default class Server {
     private static _instance: Hapi.Server;
 
-    
     public static async start(): Promise<Hapi.Server> {
         try {
             DotEnv.config({
