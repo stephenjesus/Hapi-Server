@@ -17,15 +17,15 @@ const sequelize = new Sequelize({
         handleDisconnects: true,
     },
     retry: {
-      match: [
-        'Sequelize.ConnectionError',
-        'Sequelize.ConnectionRefusedError',
-        'Sequelize.ConnectionTimedOutError',
-        'Sequelize.TimeoutError',
-        '/Deadlock/i'
-      ],
-      max: 2 
-    }
+        match: [
+            'Sequelize.ConnectionError',
+            'Sequelize.ConnectionRefusedError',
+            'Sequelize.ConnectionTimedOutError',
+            'Sequelize.TimeoutError',
+            '/Deadlock/i',
+        ],
+        max: 2,
+    },
 });
 
 export default sequelize;

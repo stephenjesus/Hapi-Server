@@ -10,12 +10,11 @@ import { DeletedAt, CreatedAt, UpdatedAt, BelongsToMany, ForeignKey } from 'sequ
         },
     },
 })
-
 export class users extends Model<users> {
     @PrimaryKey
     @Column({
         allowNull: false,
-        type: DataType.STRING
+        type: DataType.STRING,
     })
     public rollno: string;
 
@@ -26,10 +25,10 @@ export class users extends Model<users> {
     public Name: string;
 
     @Column({
-       type: DataType.STRING 
+        type: DataType.STRING,
     })
     public mobilenumber: number;
-    
+
     @CreatedAt public createdAt: Date;
 
     @UpdatedAt public updatedAt: Date;

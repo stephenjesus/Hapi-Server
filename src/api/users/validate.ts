@@ -4,22 +4,31 @@ export default {
     getuserbyid: {
         params: {
             rollno: Joi.string().required(),
-        }
+        },
     },
     getuserlist: {
-        query: { page: Joi.number().required().max(1),
-            datalimit : Joi.number().required().min(2)
-        }
+        query: {
+            page: Joi.number()
+                .required()
+                .max(1),
+            datalimit: Joi.number()
+                .required()
+                .min(2),
+        },
     },
     Createuser: {
-        payload : {
+        payload: {
             Name: Joi.string().required(),
-            rollno: Joi.string().required().min(1),
-            mobilenumber: Joi.number().required().min(10)
-        }
+            rollno: Joi.string()
+                .required()
+                .min(1),
+            mobilenumber: Joi.number()
+                .required()
+                .min(10),
+        },
     },
     searchuser: {
-        payload : Joi.string().optional(),
+        payload: Joi.string().optional(),
     },
     updateById: {
         // params: {
@@ -30,7 +39,9 @@ export default {
                 .min(10)
                 .optional(),
             Name: Joi.string().optional(),
-            rollno: Joi.string().required().min(1),
+            rollno: Joi.string()
+                .required()
+                .min(1),
         },
     },
     deleteById: {

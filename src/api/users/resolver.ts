@@ -1,4 +1,3 @@
-
 import Repository from './respository';
 import logger from '../../helper/logger';
 
@@ -11,8 +10,8 @@ export default class UserResolver {
     //     return await this.repository.invite(data, token);
     // }
 
-    public async getuserlist(page: number , datalimit: number): Promise<any> {
-        return await this.repository.getuserlist(page , datalimit);
+    public async getuserlist(page: number, datalimit: number): Promise<any> {
+        return await this.repository.getuserlist(page, datalimit);
     }
     public async getuserbyid(id: string): Promise<any> {
         return await this.repository.getuserbyid(id);

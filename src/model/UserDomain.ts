@@ -10,7 +10,4 @@ import { DeletedAt, CreatedAt, UpdatedAt, BelongsToMany, ForeignKey } from 'sequ
         },
     },
 })
-
-export class UserDomain extends Model<UserDomain> {
-
-}
+export class UserDomain extends Model<UserDomain> {}
